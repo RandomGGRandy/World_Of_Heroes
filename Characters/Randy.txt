@@ -1,11 +1,11 @@
 Stats:
 	Attack: 150
 	Health: 1000
-	Defense: 100
+	Defense: 80
 	Resistance: 10%
 	Soul Regen: 2%
-	Crit Damage: 5%,
-	Crit Rate: 2%,
+	Crit Damage: 10%
+	Crit Rate: 5%
 
 Skills:
 	Basic Attack: "Blade Strike"
