@@ -2,29 +2,29 @@ Stats:
 	Attack: 150
 	Health: 1000
 	Defense: 100
-  Resistance: 10%
-  Soul Regen: 2%
-  Crit Damage: 5%,
+	Resistance: 10%
+	Soul Regen: 2%
+	Crit Damage: 5%,
 	Crit Rate: 2%,
 
 Skills:
-  Basic Attack:  "Blade Strike"
-    Description:  "Uses the Demon King's blade to strike a single enemy"
+	Basic Attack: "Blade Strike"
+	Description: "Uses the Demon King's blade to strike a single enemy"
   
-  Medium Attack:   ""
-    Description:   ""
+	Medium Attack: ""
+	Description: ""
   
-  Heavy Attack:     "Blade Bash"
-    Description:    "Attacks all enemies with a powerful bash with a 40% chance to stun"
+	Heavy Attack: "Blade Bash"
+	Description: "Attacks all enemies with a powerful bash with a 40% chance to stun"
   
-  Ulimate:         "Demonic Power"
-    Description:   "Can absorb up to 5% of the enemy's accumulated soul gauge"
+	Ulimate: "Demonic Power"
+	Description: "Can absorb up to 5% of the enemy's accumulated soul gauge"
   
-  Special:         "Demon King's Fury"
-    Description:   "Transforms one half of their body into demonic form, unleashing a powerful sword slash to deal massive damage"
+	Special: "Demon King's Fury"
+	Description: "Transforms one half of their body into demonic form, unleashing a powerful sword slash to deal massive damage"
 
-  Passive:         "Demon King's Flame"
-    Description:   "When Scarlett is present on the battlefield, increases his attack power up to 15% of his max attack power"
+	Passive: "Demon King's Flame"
+	Description: "When Scarlett is present on the battlefield, increases your attack power up to 15% of your max attack power"
 
-  Leader:          "Attack Boost"
-    Description:   "Gives all allies on the battlefield, excluding himself, an increase to attack power up to 5% of his max attack power"
+	Leader: "Attack Boost"
+	Description: "Gives all allies on the battlefield, excluding yourself, an increase to attack power up to 5% of his max attack power"
