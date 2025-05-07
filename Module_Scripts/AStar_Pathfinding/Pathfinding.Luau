@@ -32,7 +32,6 @@ function Metamethods.CreatePath(self: Pathfinding, gridObject: PathfindingGrid, 
 	PathfindingPath.GridObject = gridObject;
 	PathfindingPath.MaxAttempts = maxAttempts or 25;
 	
-	
 	-- Returns the created path object
 	return PathfindingPath;
 end;
