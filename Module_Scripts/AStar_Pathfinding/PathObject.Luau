@@ -167,6 +167,50 @@ function Metamethods.CalculatePath(self: PathObject, startPos: Vector3, targetPo
 	end);
 end;
 
+--[[Creates a visual for each waypoint that is stored on the path
+]]
+function Metamethods.Visualize(self: PathObject)
+	
+	-- Get the visuals folder
+	local visuals = self:GetVisuals();
+	if (visuals and #self.Waypoints > 0) then
+		
+		-- Clears all visuals from the folder
+		visuals:ClearAllChildren();
+
+		-- Iterate through each waypoint
+		for _, waypoint in self.Waypoints do
+			task.wait(0.05);
+			
+			local point = Instance.new("Part");
+			point.Anchored = true;
+			point.BrickColor = BrickColor.Yellow();
+			point.CanCollide = false;
+			point.CFrame = CFrame.new(waypoint.Position);
+			point.Material = Enum.Material.Neon;
+			point.Size = Vector3.one * 3;
+			point.Parent = visuals;
+		end;
+	end;
+end;
+
+--[[Returns the folder that has contains the visuals
+]]
+function Metamethods.GetVisuals(self: PathObject): Folder
+	if (not self.Visuals) then
+		
+		-- Create the visuals folder
+		local visuals = Instance.new("Folder");
+		visuals.Name = "PathVisuals";
+		visuals.Parent = workspace;
+		
+		-- Set the visuals property
+		self.Visuals = visuals;
+	end;
+	
+	return self.Visuals;
+end;
+
 --[[Returns the path's current waypoints if any
 ]]
 function Metamethods.GetWaypoints(self: PathObject): {PathWaypoint}
@@ -182,6 +226,7 @@ function Class.New()
 	self.GridObject = nil :: Grid.GridObject?;
 	self.MaxAttempts = 25;
 	self.Status = "Idle" :: PathStatus;
+	self.Visuals = self:GetVisuals();
 	self.Waypoints = {} :: {PathWaypoint};
 	
 	-- // Events
