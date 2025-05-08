@@ -6,3 +6,6 @@ I've been working on creating an A* pathfinding system inspired by the game 'Gla
 
 After some time after creating the A* pathfinding system, I created a simple function that chooses random cell indexes to set the cell type to 'None', which in other words is untraversable cells. This way, we can test the A* pathfinding to make sure that it actually does avoid cells that can't be traversed as seen below
 ![](https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Blocked_Pathfinding.png)
+
+Even though I already have made this part of the pathfinding possible, I wanted to show off a grid mainly filled with brown cells(Crates). You can see below that the image, even though almost fully covered with crates, is still traversable. All these crates are only at a height of 1 meaning that any height that has a height difference of 1 from the current cell and the next cell, that means the cell is climbable and still can be traversed.
+![](https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Crate_Pathfinding.png)
