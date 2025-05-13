@@ -28,3 +28,8 @@ So more progress was made, even though not visible visually but more under the h
 <h2>Update 5</h2>
 So as you may have noticed that aren't looking top down on a white grid anymore, we are looking at a different perspective with more detail. What you see here is a more inline concept of a map. Now, the crates are still random just for the testing phase of the pathfinding, but you can see that we now have the arrows moving on top of the crate. Whenever the path needs to climb a crate to reach it's destination, you can see the arrows moving on top of it as well. This is to make sure that the path isn't obscurred. There are still more to do but for now, we have an actual detailed preview
 <p align="center"><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Detailed_Pathfinding.png"></p
+
+<hr>
+<h2>Minor Update 5</h2>
+There isn't much to mention in this update but a few things. The first thing you will notice is the arrows and the arrows going over 2 crates. I was able to fix the path to make it be able to move along the top of multiple crates so now it doesn't go back down to the ground when there is a crate present. A code change was made to remove custom waypoints and to just use the cell objects to form the path, this in turn allows us to expand the path so that if other properties or anything related to the cell object can be used for determining the path.
+<p align="center"><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/CrateDouble_Pathfinding.png"></p
