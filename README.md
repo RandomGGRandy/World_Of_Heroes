@@ -35,3 +35,8 @@ The first thing you will notice is the arrows and the arrows going over 2 crates
   <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/CrateDouble_Pathfinding.png" hspace="5">
   <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/CrateSteps_Pathfinding.png" hspace="5">
 </p>
+
+<hr>
+<h2>Update 7</h2>
+For this little update, You'll notice that the character and the dummy are in random cells. As part of the testing, I've made it so that the start and target cells are randomly moved, this includes recalculating the path each time they are moved. This allows me to make sure that different positions can still create a valid path between the 2 points. This will be usefull for when during the game when characters move around the map, that they can still be accessible from start to end. I've also recreated the crate asset to make it look more like a crate with sturdiness. I've also created a barrel model which will be used in the gamemode where you have to destroy as many barrels as possible within the time limit or before the other teams.
+<p align="center"><br><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Random_Pathfinding.png"></p
