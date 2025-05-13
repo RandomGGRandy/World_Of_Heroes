@@ -30,6 +30,6 @@ So as you may have noticed that aren't looking top down on a white grid anymore,
 <p align="center"><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Detailed_Pathfinding.png"></p
 
 <hr>
-<h2>Minor Update 5</h2>
+<h2>Minor Update 6</h2>
 There isn't much to mention in this update but a few things. The first thing you will notice is the arrows and the arrows going over 2 crates. I was able to fix the path to make it be able to move along the top of multiple crates so now it doesn't go back down to the ground when there is a crate present. A code change was made to remove custom waypoints and to just use the cell objects to form the path, this in turn allows us to expand the path so that if other properties or anything related to the cell object can be used for determining the path.
 <p align="center"><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/CrateDouble_Pathfinding.png"></p
