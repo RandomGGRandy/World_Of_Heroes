@@ -64,9 +64,8 @@ end;
 --[[Returns if the cell is traversable
 ]]
 function Metamethods.IsTraversable(self: CellObject, from: CellObject): boolean
-	
-	local action = self:GetAction(from);
 	return (self:GetAction(from) ~= "None" and not self.Occupant);
+	
 end;
 
 
