@@ -1,11 +1,12 @@
 -- // Variables \\ --
 -- // Math
 local Abs = math.abs;
+local sign = math.sign;
 
 -- // Misc
 local CellCost = {
 	Walkable = 1,
-	Climbable = 2,
+	Climbable = 3,
 	None = math.huge,
 
 };
@@ -20,7 +21,7 @@ Metamethods.__eq = function(self: CellObject, b: CellObject): boolean
 		
 	end;
 	
-	return (self.Position == b.Position and self.Type == b.Type and self.Height == b.Height);
+	return (self.Position == b.Position and self.Type == b.Type and self.Size == b.Size);
 end;
 
 -- // Metamethods
@@ -31,30 +32,41 @@ function Metamethods.GetCost(self: CellObject, cellType: CellType): number
 	
 end;
 
---[[Returns the type of waypoint action is needed to move to this cell from the given cell
+--[[Returns the type of cell action is needed to move to this cell from the given cell
 ]]
-function Metamethods.GetWaypointAction(self: CellObject, from: CellObject)
+function Metamethods.GetAction(self: CellObject, from: CellObject): CellAction
 	
 	-- Get the difference in height between the 2 cells
-	local heightDiff = Abs(self.Height - from.Height);
+	local yDifference = self.Size.Y - from.Size.Y;
+	local yDirection = sign(yDifference);
 	
-	-- Return the corrosponding waypoint action
-	if (self.Type == "Climbable" and Abs(self.Height - from.Height)) then
-		return Enum.PathWaypointAction.Jump;
-		
-	elseif (self.Type == "Walkable") then
-		return Enum.PathWaypointAction.Walk;
+	-- Return the corrosponding action
+	if (yDirection == 0) then -- Same height
+		if (self.Type == "Walkable" or self.Type == "Climbable") then
+			return "Walk";
+			
+		end;
+	elseif (yDirection == 1) then -- Climbing up
+		if (self.Type == "Climbable" and yDifference == 3) then
+			return "Climb";
+			
+		end;
+	elseif (yDirection == -1) then -- Dropping down
+		if (yDifference < 9) then
+			return "Jump";
+			
+		end;
+	end;
 	
-	end
-	
-	return Enum.PathWaypointAction.Custom;
+	return "None";
 end;
 
 --[[Returns if the cell is traversable
 ]]
 function Metamethods.IsTraversable(self: CellObject, from: CellObject): boolean
-	return (self:GetWaypointAction(from) ~= Enum.PathWaypointAction.Custom);
 	
+	local action = self:GetAction(from);
+	return (self:GetAction(from) ~= "None" and not self.Occupant);
 end;
 
 
@@ -65,9 +77,9 @@ function Class.New()
 
 	local self = setmetatable({}, Metamethods);
 	self.Occupant = nil;
-	self.Height = 0;
 	self.Position = Vector2.zero;
 	self.WorldPosition = Vector3.zero;
+	self.Size = Vector3.one;
 	self.Type = "Walkable" :: CellType;
 	
 	self.Cost = {
@@ -81,6 +93,8 @@ function Class.New()
 	return self;
 end;
 
+export type CellAction = "None" | "Climb" | "Jump" | "Walk";
+export type CellLabel = "Crate" | "";
 export type CellType = "Climbable" | "Walkable" | "None";
 export type CellObject = typeof(Class.New()) & typeof(Metamethods);
 return Class;
