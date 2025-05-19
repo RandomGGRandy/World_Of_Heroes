@@ -1,14 +1,3 @@
-<details>
-  <summary><h1>Code Documentation</h1></summary>
-<hr>
-  <h2>Update 1</h2>
-  I've been working on creating an A* pathfinding system inspired by the game 'Gladius (2003)'. It's been a long process since I first started. although it still has some adjustments, it's turning out pretty well by far. I want to show off 2 pictures that are result of what I have by far;
-  <p align="center"><br>
-    <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Hugged_Pathfinding.png" hspace="5">
-    <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Curve_Pathfinding.png" hspace="5">
-  </p>
-</details>
-
 # Pathfinding Previews;
 <hr>
 <h2>Update 1</h2>
