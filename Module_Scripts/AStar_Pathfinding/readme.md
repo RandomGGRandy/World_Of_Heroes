@@ -1,15 +1,16 @@
 <h2>1: Create the grid using 'CreateGrid'</h2>
 
 ```
-The grid will be set based on the given arguments; If changes are wanted,
-you must get the grid object and update desired properties. You will need
-to set the 'GridObject' property to the updated 'GridObject'.
+The grid is initialized using the provided arguments during creation.
+If you need to modify the grid after it's been created, access the
+grid object directly, update the desired properties, and reassign it
+via the `GridObject` property to apply the changes.
 
 Properties;
-- CFrame (CFrame):        Determines the position and rotation of the grid
-- CellSize (Vector3):     Determines the default size of the each cell
-- Size (Vector3):         Determines the size of the grid
-- Type (string):          Determines the grid type when populating
+- CFrame (CFrame):        Sets the origin position and orientation of the grid in world space.
+- CellSize (Vector3):     Defines the size of each individual cell. Supports non-uniform sizes (e.g, 3x5x3).
+- Size (Vector3):         Specifies the total size of grid in the X and Z directions.
+- Type (string):          Defines the grid's population logic or structure (e.g., `Circle`, `Custom`, `Square`).
 ```
 
 <h2>2: Create the Character object</h2>
