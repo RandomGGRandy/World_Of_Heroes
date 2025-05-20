@@ -4,7 +4,9 @@
 The grid is initialized using the provided arguments during creation.
 If you need to modify the grid after it's been created, access the
 grid object directly, update the desired properties, and reassign it
-via the `GridObject` property to apply the changes.
+via the `GridObject` property to apply the changes. After modifying
+or replacing the grid, you must call `PopulateGrid()` to apply the
+changes.
 
 Properties;
 - CFrame (CFrame):        Sets the origin position and orientation of the grid in world space.
