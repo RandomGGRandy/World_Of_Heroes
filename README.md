@@ -26,7 +26,7 @@ So more progress was made, even though not visible visually but more under the h
 <hr>
 <h2>Update 5</h2>
 So as you may have noticed that aren't looking top down on a white grid anymore, we are looking at a different perspective with more detail. What you see here is a more inline concept of a map. Now, the crates are still random just for the testing phase of the pathfinding, but you can see that we now have the arrows moving on top of the crate. Whenever the path needs to climb a crate to reach it's destination, you can see the arrows moving on top of it as well. This is to make sure that the path isn't obscurred. There are still more to do but for now, we have an actual detailed preview
-<p align="center"><br><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Detailed_Pathfinding.png"></p
+<p align="center"><br><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Detailed_Pathfinding.png"></p>
 
 <hr>
 <h2>Update 6</h2>
@@ -39,4 +39,9 @@ The first thing you will notice is the arrows and the arrows going over 2 crates
 <hr>
 <h2>Update 7</h2>
 For this little update, You'll notice that the character and the dummy are in random cells. As part of the testing, I've made it so that the start and target cells are randomly moved, this includes recalculating the path each time they are moved. This allows me to make sure that different positions can still create a valid path between the 2 points. This will be usefull for when during the game when characters move around the map, that they can still be accessible from start to end. I've also recreated the crate asset to make it look more like a crate with sturdiness. I've also created a barrel model which will be used in the gamemode where you have to destroy as many barrels as possible within the time limit or before the other teams.
-<p align="center"><br><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Random_Pathfinding.png"></p
+<p align="center"><br><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Random_Pathfinding.png"></p>
+
+<hr>
+<h2>Update 8</h2>
+So it's been quite some time since my last update but this one is not that big of an update but it sure is something. I have spent at least 2 days working on a small part of the code. Even though not visible in the image, I've managed to make the pathfinding way faster than I previously had. When it comes to pathfinding, you want to find the fast way possible to calculate a path in real time to allow for a smooth experience. With the pathfinding calculations out of the way, I was able to work on the character aspect of pathfinding. Now, this isn't the finalized system, there is still some improvments to be made. I will continue to work on improving and managing the code until a solid system in fininalzied.
+<p align="center"><br><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Character_Pathfinding.png"></p>
