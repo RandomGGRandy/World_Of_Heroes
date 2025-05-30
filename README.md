@@ -45,3 +45,16 @@ For this little update, You'll notice that the character and the dummy are in ra
 <h2>Update 8</h2>
 So it's been quite some time since my last update but this one is not that big of an update but it sure is something. I have spent at least 2 days working on a small part of the code. Even though not visible in the image, I've managed to make the pathfinding way faster than I previously had. When it comes to pathfinding, you want to find the fast way possible to calculate a path in real time to allow for a smooth experience. With the pathfinding calculations out of the way, I was able to work on the character aspect of pathfinding. Now, this isn't the finalized system, there is still some improvments to be made. I will continue to work on improving and managing the code until a solid system is fininalzied.
 <p align="center"><br><img width="840" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Character_Pathfinding.png"></p>
+
+<hr>
+<h2>Update 9.1</h2>
+So, this is one of the biggest updates to my game progress. You will see many images of what I have achieved, this will also be broken into multiple update parts. For this first part of the update, there will be no images but just some quick information. I have decided to reformat most of my coding and modules, the reason being is that I needed a better way to organize my code and modules. I have adapted a system module structure. Which means that I have two core modules; ClientSystem and ServerSystem. Each of these handle core aspects of the game. For example; ClientSystem -> Visuals and ServerSystem -> Pathfinding. There are other modules under these base modules that closely work with each other. This will allow server and client scripts to have access to all other modules in one location. This system so far has been a huge awaited addition and change, this will help me code faster and bring forward large updates like this one.
+
+<h2>Update 9.2</h2>
+If you look at the four images below, you can see the billboard Gui above the test character. This gui shows you the character's health, their speed bar and an arrow that points down to them. You'll notice that they are four different colors, each color is a team color. In our game currently, you will be able to battle with up to three other player's team. This will open the door to introducing more modes, which includes FFA, Team Doubles, Objective, Triple Team and more. With this new concept getting closer to reality, I'm working harder with each update to make it more possible!
+<p align="center"><br>
+  <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/BlueTeam_Billboard.png" hspace="5">
+  <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/RedTeam_Billboard.png" hspace="5">
+  <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/GreenTeam_Billboard.png" hspace="5">
+  <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/YellowTeam_Billboard.png" hspace="5">
+</p>
