@@ -58,3 +58,7 @@ If you look at the four images below, you can see the billboard Gui above the te
   <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/GreenTeam_Billboard.png" hspace="5">
   <img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/YellowTeam_Billboard.png" hspace="5">
 </p>
+
+<h2>Update 9.3</h2>
+In the image below, on top of the color of the arrow that repersents the team color of the team that character is on. This adds on top of team visuals, making the path use the color of your team so you can see where your character's and enemies path. This will help differentiate what team each character is on. Teams can consist of same units as other teams. This will help leviate trying to figure out what character is/not yours. I like how the team aspect of the game is comming along and how it can help and visually make the game more appealing.
+<p align="center"><br><img width="420" height="420" src="https://github.com/RandomGGRandy/World_Of_Heroes/blob/main/Images/Visuals/Team_Path.png"></p>
